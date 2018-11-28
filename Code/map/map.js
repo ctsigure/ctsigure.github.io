@@ -1,5 +1,5 @@
 mymap = L.map('mapid').setView([37.393507, -121.987338], 12);
-baseurl = 'http://open.mapquestapi.com/nominatim/v1/search.php?key=TmcKhVoM47cT6jdlyTyBrTnmElpE2HOq&format=json&addressdetails=1&limit=1&bounded=0&json_callback=resetMarkers';
+baseurl = 'https://open.mapquestapi.com/nominatim/v1/search.php?key=TmcKhVoM47cT6jdlyTyBrTnmElpE2HOq&format=json&addressdetails=1&limit=1&bounded=0&json_callback=resetMarkers';
 url = baseurl
 markerLocs = []
 
