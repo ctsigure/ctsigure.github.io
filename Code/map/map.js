@@ -13,7 +13,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 
 function markOnMap(address) {
-    console.log(address)
 
     url = baseurl + "&q=" + escape(address)
     let div = document.getElementById('searchdiv')
@@ -45,9 +44,11 @@ function showMarkers() {
     }
 }
 
+counter = -1
 function resetMarkers(res) {
+    counter++
     if (res.length == 0) {
-        console.log("Cannot find latlog.")
+        console.log("No latlon for " + addresses[counter] + ", " + schoolNames[counter])
         return
     }
     res.forEach((l) => {
