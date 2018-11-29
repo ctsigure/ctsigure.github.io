@@ -59,24 +59,26 @@
         }
         div = document.createElement('div')
         div.id = 'mapid'
-        div.style = "width: 1000px; height: 500px;"
+        div.style = "width: 1000px; height: 500px; position: absolute;"
         let s = document.createElement('script')
         s.src = 'map.js'
         div.appendChild(s)
         document.getElementsByTagName('body')[0].appendChild(div)
+        // Cover it
+        /*
+        div = document.getElementById('cover')
+        if (div) {
+          div.parentElement.removeChild(div)
+        }
+        div = document.createElement('div')
+        div.id = 'cover'
+        div.style = "width: 1000px; height: 500px; position: absolute; background-color: black; opacity: .8;"
+        div.TEXT_NODE = "abc"
+        document.getElementsByTagName('body')[0].appendChild(div)
+        */
       }
       createMap()
 
-      function saveAddress(event) {
-        if (event.code == "Enter" || event.code == 'NumpadEnter') {
-          let address = document.getElementById("address").value
-          if (address != "") {
-            addresses[0] = address
-//            localStorage.setItem('address', value)
-            createMap()
-          }
-        }
-      }
     </script>
   </body>
 </html>
