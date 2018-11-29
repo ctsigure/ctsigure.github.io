@@ -13,6 +13,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 
 function markOnMap(address) {
+    console.log(address)
 
     url = baseurl + "&q=" + escape(address)
     let div = document.getElementById('searchdiv')
@@ -46,6 +47,7 @@ function showMarkers() {
 
 function resetMarkers(res) {
     if (res.length == 0) {
+        console.log("Cannot find latlog.")
         return
     }
     res.forEach((l) => {
