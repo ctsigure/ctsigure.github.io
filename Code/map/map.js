@@ -47,6 +47,10 @@ function showMarkers() {
         return
     }
     clearInterval(timerId)
+    /*
+    let cover = document.getElementById('cover')
+    cover.parentElement.removeChild(cover)
+    */
     let count = 0
     markerLocs.forEach(m => {
         if (m) {
