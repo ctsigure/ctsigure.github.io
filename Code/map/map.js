@@ -44,11 +44,8 @@ function showMarkers() {
     }
 }
 
-counter = -1
 function resetMarkers(res) {
-    counter++
     if (res.length == 0) {
-        console.log("No latlon for " + addresses[counter] + ", " + schoolNames[counter])
         return
     }
     res.forEach((l) => {
